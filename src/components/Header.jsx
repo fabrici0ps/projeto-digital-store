@@ -18,15 +18,17 @@ function Header() {
                 </a>
                 <div className="bg-darkgray-2/5 flex items-center rounded-lg px-4 py-3 flex-1">
                     <input 
-                        className="bg-transparent w-full text-sm placeholder:text-darkgray-3/60" 
+                        className="bg-transparent focus:outline-none w-full text-sm text-darkgray-2 placeholder:text-darkgray-3/60" 
                         type="text" 
                         placeholder="Pesquisar produto..." 
                     />
-                    <img className="w-5 h-5" src={SearchIcon} alt="Search Icon" />
+                    <a href="#">
+                        <img className="w-5 h-5" src={SearchIcon} alt="Search Icon" />
+                    </a>
                 </div>
-                <span className="text-darkgray-2 text-base underline whitespace-nowrap">Cadastre-se</span>
+                <a href="#" className="text-darkgray-2 text-base underline whitespace-nowrap">Cadastre-se</a>
                 <div className="flex gap-16 items-center">
-                    <Button className="w-28" title="Entrar"/>
+                    <Button className="bg-primary w-28" title="Entrar"/>
                     <div className="cursor-pointer relative">
                         <img src={MiniCart} alt="Mini Cart" />
                         <div className="bg-error w-4 h-4 rounded-full text-xs font-bold text-white text-center absolute top-[-8px] right-[-8px]">
