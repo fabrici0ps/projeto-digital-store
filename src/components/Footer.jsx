@@ -8,7 +8,7 @@ import CardFooter from "./CardFooter"
 function Footer() {
     return (
         <footer className="bg-darkgray-1 flex flex-col px-[100px] pt-16 items-center text-[16px] text-white">
-            <div className="flex w-full justify-between pb-8 border-b-2 border-white/30">
+            <div className="flex w-full items-start justify-between pb-8">
                 <div className="w-80">
                     <Logo location="footer" className="mb-9" />
                     <p className="mb-10">
@@ -26,35 +26,42 @@ function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className="">
-                    <div className="flex gap-28">
-                        <CardFooter title="Informação">
-                            <li>Sobre Drip Store</li>
-                            <li>Segurança</li>
-                            <li>Wishlist</li>
-                            <li>Blog</li>
-                            <li>Trabalhe conosco</li>
-                            <li>Meus Pedidos</li>
-                        </CardFooter>
-                        <CardFooter title="Categorias">
-                            <li>Camisetas</li>
-                            <li>Calças</li>
-                            <li>Bonés</li>
-                            <li>Headphones</li>
-                            <li>Tênis</li>
-                        </CardFooter>
-                        <CardFooter className="w-52" title="Contato">
-                            <li>
-                                Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161
-                            </li>
-                            <li><Link to="tel:8530513411">(85) 3051-3411</Link></li>
-                        </CardFooter>
-                    </div>
+                <div className="flex gap-28">
+                    <CardFooter 
+                        title="Informação"
+                        informations={[
+                            { text: "Sobre Drip Store", link: "/about" },
+                            { text: "Segurança", link: "/security" },
+                            { text: "Wishlist", link: "/wishlist" },
+                            { text: "Blog", link: "/blog" },
+                            { text: "Trabalhe conosco", link: "/careers" },
+                            { text: "Meus Pedidos", link: "/orders" }
+                        ]}
+                    />
+                    <CardFooter 
+                        title="Categorias" 
+                        informations={[
+                            { text: "Camisetas", link: "/categories/t-shirts" },
+                            { text: "Calças", link: "/categories/pants" },
+                            { text: "Bonés", link: "/categories/hats" },
+                            { text: "Headphones", link: "/categories/accessories" },
+                            { text: "Tênis", link: "/categories/sneakers" }
+                        ]}
+                    />
+                    <CardFooter 
+                        className="w-52" 
+                        title="Contato" 
+                        informations={[
+                            { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161" },
+                            { text: "(85) 3051-3411", link: "tel:8530513411" }
+                        ]}
+                    />
                 </div>
             </div>
-            <div className="py-6">
-                @ 2022 Digital College
-            </div>
+            <hr className="w-full border-white/30" />
+            <p className="py-6">
+                @ 2024 Digital College
+            </p>
         </footer>
     )
 }

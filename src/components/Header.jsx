@@ -1,14 +1,23 @@
-import { Link, NavLink } from "react-router";
+import { useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router";
 import Logo from "./Logo"
 import SearchIcon from "../assets/search-icon.svg"
 import MiniCart from "../assets/mini-cart.svg"
 import Button from "./Button";
 
 function Header() {
+    const navigate = useNavigate()
+    const [search, setSearch] = useState("")
     const linkActive = ({isActive}) => 
         isActive 
             ? "text-primary font-bold border-b-2 border-primary pb-2" 
             : "text-darkgray-2"
+
+    function handleSearch(e) {
+        e.preventDefault()
+        navigate(`/products?filter=${search}`)
+        setSearch("")
+    }
 
     return (
         <header className="bg-white flex flex-col gap-10 px-[100px] py-8">
@@ -16,19 +25,21 @@ function Header() {
                 <Link to="/">
                     <Logo location="header" />
                 </Link>
-                <div className="bg-darkgray-2/5 flex items-center rounded-lg px-4 py-3 flex-1">
+                <form className="bg-darkgray-2/5 flex items-center rounded-lg px-4 py-3 flex-1">
                     <input 
                         className="bg-transparent focus:outline-none w-full text-sm text-darkgray-2 placeholder:text-darkgray-3/60" 
                         type="text" 
-                        placeholder="Pesquisar produto..." 
+                        placeholder="Pesquisar produto..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
                     />
-                    <Link to="#">
+                    <button onClick={handleSearch}>
                         <img className="w-5 h-5" src={SearchIcon} alt="Search Icon" />
-                    </Link>
-                </div>
+                    </button>
+                </form>
                 <Link to="#" className="text-darkgray-2 text-base underline whitespace-nowrap">Cadastre-se</Link>
                 <div className="flex gap-16 items-center">
-                    <Button className="bg-primary w-28" title="Entrar"/>
+                    <Link className="flex justify-center items-center bg-primary w-[114px] h-10 rounded-[4px] font-bold text-white text-sm">Entrar</Link>
                     <div className="cursor-pointer relative">
                         <img src={MiniCart} alt="Mini Cart" />
                         <div className="bg-error w-4 h-4 rounded-full text-xs font-bold text-white text-center absolute top-[-8px] right-[-8px]">
