@@ -1,14 +1,16 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 function LayoutPage() {
     return(
-        <>
+        <div className="flex flex-col min-h-screen">
             <Header />
-            <Outlet />
+            <main className="bg-lightgray-3">
+                <Outlet />
+            </main>
             <Footer />
-        </>
+        </div>
     )
 }
 

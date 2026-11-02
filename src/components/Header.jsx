@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router";
 import Logo from "./Logo"
 import SearchIcon from "../assets/search-icon.svg"
 import MiniCart from "../assets/mini-cart.svg"
@@ -11,22 +11,22 @@ function Header() {
             : "text-darkgray-2"
 
     return (
-        <header className="flex flex-col gap-10 px-28 py-8">
+        <header className="bg-white flex flex-col gap-10 px-[100px] py-8">
             <div className="flex gap-7 items-center justify-between">
-                <a href="/">
+                <Link to="/">
                     <Logo location="header" />
-                </a>
+                </Link>
                 <div className="bg-darkgray-2/5 flex items-center rounded-lg px-4 py-3 flex-1">
                     <input 
                         className="bg-transparent focus:outline-none w-full text-sm text-darkgray-2 placeholder:text-darkgray-3/60" 
                         type="text" 
                         placeholder="Pesquisar produto..." 
                     />
-                    <a href="#">
+                    <Link to="#">
                         <img className="w-5 h-5" src={SearchIcon} alt="Search Icon" />
-                    </a>
+                    </Link>
                 </div>
-                <a href="#" className="text-darkgray-2 text-base underline whitespace-nowrap">Cadastre-se</a>
+                <Link to="#" className="text-darkgray-2 text-base underline whitespace-nowrap">Cadastre-se</Link>
                 <div className="flex gap-16 items-center">
                     <Button className="bg-primary w-28" title="Entrar"/>
                     <div className="cursor-pointer relative">
