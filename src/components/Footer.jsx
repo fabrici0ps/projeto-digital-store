@@ -7,7 +7,7 @@ import CardFooter from "./CardFooter"
 
 function Footer() {
     return (
-        <footer className="bg-darkgray-1 flex flex-col px-[100px] pt-16 items-center text-[16px] text-white">
+        <footer className="bg-darkgray-1 flex flex-col px-28 pt-16 items-center text-base text-white">
             <div className="flex w-full items-start justify-between pb-8">
                 <div className="w-80">
                     <Logo location="footer" className="mb-9" />

@@ -20,14 +20,14 @@ function Header() {
     }
 
     return (
-        <header className="bg-white flex flex-col gap-10 px-[100px] py-8">
+        <header className="bg-white flex flex-col gap-10 px-28 py-8">
             <div className="flex gap-7 items-center justify-between">
                 <Link to="/">
                     <Logo location="header" />
                 </Link>
-                <form className="bg-darkgray-2/5 flex items-center rounded-lg px-4 py-3 flex-1">
+                <form className="bg-darkgray-2/5 flex items-center rounded-lg px-6 py-4 flex-1">
                     <input 
-                        className="bg-transparent focus:outline-none w-full text-sm text-darkgray-2 placeholder:text-darkgray-3/60" 
+                        className="bg-transparent focus:outline-none w-full text-base text-darkgray-2 placeholder:text-darkgray-3/60" 
                         type="text" 
                         placeholder="Pesquisar produto..."
                         value={search}

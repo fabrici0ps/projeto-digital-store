@@ -14,17 +14,19 @@ export default {
           success: '#52CA76',
           warning: '#F6AA1C',
           white: "#FFFFFF",
+          discount: "#E7FF86",
+          background: "#F9F8FE",
 
-        darkgray: {
-          1: "#1F1F1F",
-          2: "#474747",
-          3: "#666666",
-        },
-        lightgray: {
-          1: "#8F8F8F",
-          2: "#CCCCCC",
-          3: "#F5F5F5",
-        }
+          darkgray: {
+            1: "#1F1F1F",
+            2: "#474747",
+            3: "#666666",
+          },
+          lightgray: {
+            1: "#8F8F8F",
+            2: "#CCCCCC",
+            3: "#F5F5F5",
+          }
       }
     },
   },
