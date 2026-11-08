@@ -60,7 +60,7 @@ function Footer() {
             </div>
             <hr className="w-full border-white/30" />
             <p className="py-6">
-                @ 2024 Digital College
+                @ 2026 Digital College
             </p>
         </footer>
     )

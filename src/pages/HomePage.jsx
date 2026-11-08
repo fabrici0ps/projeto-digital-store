@@ -1,4 +1,4 @@
-import Gallery from "../components/Gallery"
+import BannerHome from "../components/BannerHome"
 import ProductListing from "../components/ProductListing"
 import Section from "../components/Section"
 import CollectionCardList from "../components/CollectionCardList"
@@ -17,16 +17,9 @@ import Sneakers from "../assets/sneakers.svg"
 import SpecialOffer from "../components/SpecialOffer"
 
 function HomePage() {
-  const items = [
-    { title: "Camisetas", image: Tshirt },
-    { title: "Calças", image: Pants },
-    { title: "Bonés", image: Pants },
-    { title: "Headphones", image: Headphones },
-    { title: "Tẽnis", image: Sneakers }
-  ]
   return (
     <>
-      <Gallery />
+      <BannerHome />
 
       <Section title="Coleções em destaque">
         <CollectionCardList 
@@ -53,15 +46,17 @@ function HomePage() {
       </Section>
 
       <Section title="Coleções em destaque" textAlign="center">
-        <div className="flex gap-12 justify-center">
-          {items.map((item, index) => (
-            <CollectionItem 
-              key={index} 
-                title={item.title}
-                image={item.image}
-            />
-          ))}
-        </div>
+        <CollectionItem
+            items={
+              [
+                { title: "Camisetas", image: Tshirt },
+                { title: "Calças", image: Pants },
+                { title: "Bonés", image: Pants },
+                { title: "Headphones", image: Headphones },
+                { title: "Tẽnis", image: Sneakers }
+              ]
+            }            
+        />
       </Section>
         
       <Section

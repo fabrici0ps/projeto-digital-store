@@ -8,7 +8,7 @@ import "swiper/css/pagination"
 import bannerImage from "/white-sneakers.png"
 import Button from "./Button"
 
-function Gallery() {
+function BannerHome() {
     const slidesBanner = [
         {
             id: 1,
@@ -76,4 +76,4 @@ function Gallery() {
     )
 }
 
-export default Gallery
+export default BannerHome
