@@ -6,7 +6,7 @@ function LayoutPage() {
     return(
         <div className="flex flex-col min-h-screen">
             <Header />
-            <main className="bg-background">
+            <main className="flex-1 bg-background">
                 <Outlet />
             </main>
             <Footer />
@@ -14,4 +14,4 @@ function LayoutPage() {
     )
 }
 
-export default LayoutPage;
+export default LayoutPage

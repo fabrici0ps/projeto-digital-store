@@ -16,118 +16,148 @@ import Headphones from "../assets/headphones.svg"
 import Sneakers from "../assets/sneakers.svg"
 import SpecialOffer from "../components/SpecialOffer"
 
+import bannerImage from "/white-sneakers.png"
+
 function HomePage() {
   return (
     <>
-      <BannerHome />
+      <BannerHome
+        images={[bannerImage,bannerImage,bannerImage]}
+        showThumbs={true}
+        radius="10px"
+      />
 
-      <Section title="Coleções em destaque">
-        <CollectionCardList 
-          collections={
-            [
-              {
-                name: "Coleção 1",
-                image: Collection1,
-                discount: 30
-              },
-              {
-                name: "Coleção 2",
-                image: Collection2,
-                discount: 30
-              },
-              {
-                name: "Coleção 3",
-                image: Collection3,
-                discount: 30
-              }
-            ]
-          } 
-        />
-      </Section>
+      <div className="container-layout">
+        <Section 
+          title="Coleções em destaque"
+          className="pt-11 pb-28"
+        >
+            <CollectionCardList 
+              collections={
+                [
+                  {
+                    name: "Coleção 1",
+                    image: Collection1,
+                    discount: 30
+                  },
+                  {
+                    name: "Coleção 2",
+                    image: Collection2,
+                    discount: 30
+                  },
+                  {
+                    name: "Coleção 3",
+                    image: Collection3,
+                    discount: 30
+                  }
+                ]
+              } 
+            />
+        </Section>
+      </div>
 
-      <Section title="Coleções em destaque" textAlign="center">
-        <CollectionItem
-            items={
-              [
-                { title: "Camisetas", image: Tshirt },
-                { title: "Calças", image: Pants },
-                { title: "Bonés", image: Pants },
-                { title: "Headphones", image: Headphones },
-                { title: "Tẽnis", image: Sneakers }
-              ]
-            }            
-        />
-      </Section>
+      <div className="container-layout">
+        <Section 
+          title="Coleções em destaque" 
+          textAlign="center"
+          className="pb-32"
+        >
+            <CollectionItem
+                items={
+                  [
+                    { title: "Camisetas", image: Tshirt },
+                    { title: "Calças", image: Pants },
+                    { title: "Bonés", image: Pants },
+                    { title: "Headphones", image: Headphones },
+                    { title: "Tẽnis", image: Sneakers }
+                  ]
+                }            
+            />
+        </Section>
+      </div>
         
-      <Section
-        title="Produtos em alta"
-        link={{ text: "Ver todos", href: "/products" }}
-      >
-        <ProductListing 
-          products={
-            [
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-                discount: 25
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-                discount: 25
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              },
-              {
-                name: "K-Swiss V8 - Masculino",
-                image: productCard,
-                category: "Tênis",
-                price: 200,
-                priceDiscount: 149.9,
-              }
-            ]
+      <div className="container-layout">
+        <Section
+          title="Produtos em alta"
+          link={
+            { text: "Ver todos", href: "/products" }
           }
-        />
-      </Section>
+        >
+            <ProductListing
+              cols={4} 
+              products={
+                [
+                  {
+                    id: 1,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                    discount: 25
+                  },
+                  {
+                    id: 2,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                    discount: 25
+                  },
+                  {
+                    id: 3,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  },
+                  {
+                    id: 4,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  },
+                  {
+                    id: 5,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  },
+                  {
+                    id: 6,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  },
+                  {
+                    id: 7,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  },
+                  {
+                    id: 8,
+                    name: "K-Swiss V8 - Masculino",
+                    image: productCard,
+                    category: "Tênis",
+                    price: 200,
+                    priceDiscount: 149.9,
+                  }
+                ]
+              }
+            />
+        </Section>
+      </div>
       <SpecialOffer />
     </>
   )

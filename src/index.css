@@ -10,3 +10,9 @@
 .swiper-pagination-bullet-active {
   background-color: #C92071 !important;                
 }
+
+@layer components {
+  .container-layout {
+    @apply mx-auto w-full max-w-[1440px] px-5 lg:px-28;
+  }
+}
