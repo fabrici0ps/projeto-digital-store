@@ -1,6 +1,5 @@
 import { Link } from "react-router"
 import Button from "./Button"
-import AirJordan from "/air-jordan.png"
 
 function SpecialOffer() {
     return (
@@ -8,7 +7,7 @@ function SpecialOffer() {
             <div className="container-layout">
                 <div className="grid grid-cols-2 py-28 gap-16">
                     <div className="flex justify-center items-center">
-                        <img src={AirJordan} alt="Air Jordan" />
+                        <img src="/air-jordan.png" alt="Air Jordan" />
                     </div>
                     <div className="flex flex-col justify-between">
                         <div className="flex flex-col gap-5">

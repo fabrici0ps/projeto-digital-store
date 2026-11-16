@@ -19,7 +19,6 @@ function Header() {
     }
 
     return (
-        // flex flex-col gap-10 py-8
         <header className="bg-white w-full">
             <div className="container-layout">
                 <div className="flex flex-col gap-10 py-8">

@@ -8,7 +8,7 @@ function CardFooter({title, informations, className}) {
             <ul className="flex flex-col gap-3">
                 {informations.map((item, index) => (
                     <li key={index}>
-                        <Link to={item.link}>{item.text}</Link>
+                        <Link to={item.link} target={item.target}>{item.text}</Link>
                     </li>
                 ))}
             </ul>

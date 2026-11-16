@@ -32,30 +32,34 @@ function Footer() {
                             <CardFooter 
                                 title="Informação"
                                 informations={[
-                                    { text: "Sobre Drip Store", link: "/about" },
-                                    { text: "Segurança", link: "/security" },
-                                    { text: "Wishlist", link: "/wishlist" },
-                                    { text: "Blog", link: "/blog" },
-                                    { text: "Trabalhe conosco", link: "/careers" },
-                                    { text: "Meus Pedidos", link: "/orders" }
+                                    { text: "Sobre Drip Store", link: "/about", target: "_self" },
+                                    { text: "Segurança", link: "/security", target: "_self" },
+                                    { text: "Wishlist", link: "/wishlist", target: "_self" },
+                                    { text: "Blog", link: "/blog", target: "_self" },
+                                    { text: "Trabalhe conosco", link: "/careers", target: "_self" },
+                                    { text: "Meus Pedidos", link: "/orders", target: "_self" }
                                 ]}
                             />
                             <CardFooter 
                                 title="Categorias" 
                                 informations={[
-                                    { text: "Camisetas", link: "/categories/t-shirts" },
-                                    { text: "Calças", link: "/categories/pants" },
-                                    { text: "Bonés", link: "/categories/hats" },
-                                    { text: "Headphones", link: "/categories/accessories" },
-                                    { text: "Tênis", link: "/categories/sneakers" }
+                                    { text: "Camisetas", link: "/categories/t-shirts", target: "_self" },
+                                    { text: "Calças", link: "/categories/pants", target: "_self" },
+                                    { text: "Bonés", link: "/categories/hats", target: "_self" },
+                                    { text: "Headphones", link: "/categories/accessories", target: "_self" },
+                                    { text: "Tênis", link: "/categories/sneakers", target: "_self" }
                                 ]}
                             />
                             <CardFooter 
                                 className="w-52" 
                                 title="Contato" 
                                 informations={[
-                                    { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161" },
-                                    { text: "(85) 3051-3411", link: "tel:8530513411" }
+                                    { 
+                                        text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161",
+                                        link: "https://maps.app.goo.gl/pw9TfCfNQsLyrPHv5",
+                                        target: "_blank"
+                                    },
+                                    { text: "(85) 3051-3411", link: "tel:8530513411", target: "_self" }
                                 ]}
                             />
                         </div>

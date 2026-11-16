@@ -4,28 +4,16 @@ import Section from "../components/Section"
 import CollectionCardList from "../components/CollectionCardList"
 import CollectionItem from "../components/CollectionItem"
 
-import productCard from "/product-card.png"
-
-import Collection1 from "/collection-1.png"
-import Collection2 from "/collection-2.png"
-import Collection3 from "/collection-3.png"
-
 import Tshirt from "../assets/tshirt.svg"
 import Pants from "../assets/pants.svg"
 import Headphones from "../assets/headphones.svg"
 import Sneakers from "../assets/sneakers.svg"
 import SpecialOffer from "../components/SpecialOffer"
 
-import bannerImage from "/white-sneakers.png"
-
 function HomePage() {
   return (
     <>
-      <BannerHome
-        images={[bannerImage,bannerImage,bannerImage]}
-        showThumbs={true}
-        radius="10px"
-      />
+      <BannerHome/>
 
       <div className="container-layout">
         <Section 
@@ -37,17 +25,17 @@ function HomePage() {
                 [
                   {
                     name: "Coleção 1",
-                    image: Collection1,
+                    image: "/collection-1.png",
                     discount: 30
                   },
                   {
                     name: "Coleção 2",
-                    image: Collection2,
+                    image: "/collection-2.png",
                     discount: 30
                   },
                   {
                     name: "Coleção 3",
-                    image: Collection3,
+                    image: "/collection-3.png",
                     discount: 30
                   }
                 ]
@@ -84,13 +72,16 @@ function HomePage() {
           }
         >
             <ProductListing
-              cols={4} 
+              cols={{
+                default: 2,
+                lg: 4
+              }} 
               products={
                 [
                   {
                     id: 1,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -99,7 +90,7 @@ function HomePage() {
                   {
                     id: 2,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -108,7 +99,7 @@ function HomePage() {
                   {
                     id: 3,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -116,7 +107,7 @@ function HomePage() {
                   {
                     id: 4,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -124,7 +115,7 @@ function HomePage() {
                   {
                     id: 5,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -132,7 +123,7 @@ function HomePage() {
                   {
                     id: 6,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -140,7 +131,7 @@ function HomePage() {
                   {
                     id: 7,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,
@@ -148,7 +139,7 @@ function HomePage() {
                   {
                     id: 8,
                     name: "K-Swiss V8 - Masculino",
-                    image: productCard,
+                    image: "/product-card.png",
                     category: "Tênis",
                     price: 200,
                     priceDiscount: 149.9,

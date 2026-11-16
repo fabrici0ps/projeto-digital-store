@@ -1,12 +1,7 @@
-import { useSearchParams } from "react-router"
 import FilterGroup from "../components/FilterGroup"
 import ProductListing from "../components/ProductListing"
-import Section from "../components/Section"
-
-import productCard from "/product-card.png"
 
 function ProductListingPage() {
-  const {filter} = useSearchParams()
 
   return (
     <div className="w-full">
@@ -20,7 +15,7 @@ function ProductListingPage() {
             >
               Ordenar por:
             </label>
-            <select id="order" name="order" className="pr-10 bg-transparent">
+            <select id="order" name="order" className="pr-10 bg-transparent outline-none">
               <option value="asc">Menor preço</option>
               <option value="desc">Maior preço</option>
             </select>
@@ -67,13 +62,16 @@ function ProductListingPage() {
             />
           </aside>
           <ProductListing
-            cols={3} 
+            cols={{
+              default: 2,
+              lg: 3
+            }} 
             products={
               [
                 {
                   id: 1,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -82,7 +80,7 @@ function ProductListingPage() {
                 {
                   id: 2,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -91,7 +89,7 @@ function ProductListingPage() {
                 {
                   id: 3,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -99,7 +97,7 @@ function ProductListingPage() {
                 {
                   id: 4,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -107,7 +105,7 @@ function ProductListingPage() {
                 {
                   id: 5,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -115,7 +113,7 @@ function ProductListingPage() {
                 {
                   id: 6,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -123,7 +121,7 @@ function ProductListingPage() {
                 {
                   id: 7,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -131,7 +129,7 @@ function ProductListingPage() {
                 {
                   id: 8,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -139,7 +137,7 @@ function ProductListingPage() {
                 {
                   id: 9,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -147,7 +145,7 @@ function ProductListingPage() {
                 {
                   id: 10,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -155,7 +153,7 @@ function ProductListingPage() {
                 {
                   id: 11,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -163,7 +161,7 @@ function ProductListingPage() {
                 {
                   id: 12,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -171,7 +169,7 @@ function ProductListingPage() {
                 {
                   id: 13,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -179,7 +177,7 @@ function ProductListingPage() {
                 {
                   id: 14,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,
@@ -187,7 +185,7 @@ function ProductListingPage() {
                 {
                   id: 15,
                   name: "K-Swiss V8 - Masculino",
-                  image: productCard,
+                  image: "/product-card.png",
                   category: "Tênis",
                   price: 200,
                   priceDiscount: 149.9,

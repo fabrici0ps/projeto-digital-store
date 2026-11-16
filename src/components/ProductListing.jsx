@@ -1,13 +1,31 @@
 import { Link } from "react-router";
 import ProductCard from "./ProductCard";
 
-function ProductListing({products, cols}) {
+function ProductListing({products, cols = {}}) {
+
+    const breakpoints = {
+        default: {
+            1: "grid-cols-1",
+            2: "grid-cols-2"
+        },
+        lg: {
+            3: "lg:grid-cols-3",
+            4: "lg:grid-cols-4",
+        }
+    }
+
+    const gridClasses = Object.entries(cols)
+        .map(([breakpoint, quantity]) => {
+            return breakpoints[breakpoint]?.[quantity];
+        })
+        .filter(Boolean)
+        .join(" ");
+
     return (
-        <div className={`grid grid-cols-${cols} w-full gap-4 pb-16`}>
+        <div className={`grid ${gridClasses} w-full gap-4 pb-16`}>
             {products.map((product) => (
-                <Link to={`/products/${product.id}`}>
+                <Link key={product.id} to={`/products/${product.id}`}>
                     <ProductCard
-                        key={product.id}
                         name={product.name}
                         category={product.category}
                         price={product.price}

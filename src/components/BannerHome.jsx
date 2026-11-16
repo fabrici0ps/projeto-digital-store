@@ -5,7 +5,6 @@ import { Pagination, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 
-import bannerImage from "/white-sneakers.png"
 import Button from "./Button"
 
 function BannerHome() {
@@ -15,30 +14,28 @@ function BannerHome() {
             tag: "Melhores ofertas personalizadas",
             title: "Queima de estoque Nike 🔥",
             description: "Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.",
-            image: bannerImage
+            image: "/white-sneakers.png"
         },
         {
             id: 2,
             tag: "Coleção Exclusiva",
             title: "Chegaram os novos Jordan 🏃‍♂️",
             description: "Aproveite os novos modelos com desconto de lançamento e frete grátis para todo o país.",
-            image: bannerImage
+            image: "/white-sneakers.png"
         },
         {
             id: 3,
             tag: "Lançamento Exclusivo",
             title: "Novos Tênis Jordan 🚀",
             description: "Descubra a nova linha com tecnologia de amortecimento avançada e design urbano autêntico.",
-            buttonLink: "/products",
-            image: bannerImage
+            image: "/white-sneakers.png"
         },
         {
             id: 4,
             tag: "Moda Urbana",
             title: "Estilo e Conforto Diário ✨",
             description: "Encontre os modelos mais versáteis para acompanhar a sua rotina com personalidade.",
-            buttonLink: "/products",
-            image: bannerImage,
+            image: "/white-sneakers.png"
         }
     ]
 
