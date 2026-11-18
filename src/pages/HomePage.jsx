@@ -76,76 +76,7 @@ function HomePage() {
                 default: 2,
                 lg: 4
               }} 
-              products={
-                [
-                  {
-                    id: 1,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                    discount: 25
-                  },
-                  {
-                    id: 2,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                    discount: 25
-                  },
-                  {
-                    id: 3,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  },
-                  {
-                    id: 4,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  },
-                  {
-                    id: 5,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  },
-                  {
-                    id: 6,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  },
-                  {
-                    id: 7,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  },
-                  {
-                    id: 8,
-                    name: "K-Swiss V8 - Masculino",
-                    image: "/product-card.png",
-                    category: "Tênis",
-                    price: 200,
-                    priceDiscount: 149.9,
-                  }
-                ]
-              }
+              limit={8}
             />
         </Section>
       </div>

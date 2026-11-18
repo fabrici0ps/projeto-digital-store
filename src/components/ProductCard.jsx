@@ -12,8 +12,8 @@ function ProductCard({ name, category, price, priceDiscount, image, discount }) 
             <p className="text-lightgray-1 text-xs font-bold">{category}</p>
             <p className="text-darkgray-2 text-2xl">{name}</p>
             <div className="flex gap-2">
-                <span className="text-lightgray-1 text-2xl line-through">${price}</span>
-                <span className="text-darkgray-1 text-2xl font-bold">${priceDiscount}</span>
+                <span className="text-lightgray-1 text-2xl line-through">R$ {price}</span>
+                <span className="text-darkgray-1 text-2xl font-bold">R$ {priceDiscount}</span>
             </div>
         </div>
     )

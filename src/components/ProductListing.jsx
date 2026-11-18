@@ -1,7 +1,31 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import ProductCard from "./ProductCard";
+import api from "../services/api"
 
-function ProductListing({products, cols = {}}) {
+function ProductListing({cols = {}, limit}) {
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        async function fetchProducts() {
+            try {
+                const response = await api.get("products")
+                setProducts(response.data)
+            } catch (error) {
+                console.error('Erro ao buscar os produtos:', error);
+            } finally {
+                setLoading(false)
+            }
+        }
+        fetchProducts()
+    }, [])
+
+    const displayProducts = limit ? products.slice(0, limit) : products
+
+    if (loading) {
+        return <p className="text-center py-8">Carregando produtos...</p>;
+    }
 
     const breakpoints = {
         default: {
@@ -23,7 +47,7 @@ function ProductListing({products, cols = {}}) {
 
     return (
         <div className={`grid ${gridClasses} w-full gap-4 pb-16`}>
-            {products.map((product) => (
+            {displayProducts.map((product) => (
                 <Link key={product.id} to={`/products/${product.id}`}>
                     <ProductCard
                         name={product.name}

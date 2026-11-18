@@ -1,11 +1,31 @@
+import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import Gallery from "../components/Gallery"
 import BuyBox from "../components/BuyBox"
 import ProductListing from "../components/ProductListing"
 import Section from "../components/Section"
+import ProductsOptions from "../components/ProductOptions"
+import api from "../services/api"
 
 function ProductViewPage() {
   const { id } = useParams()
+  const [product, setProduct] = useState({})
+  
+  useEffect(() => {
+    async function findProduct(id) {
+      try {
+        const result = await api.get(`products/${id}`)
+        setProduct(result.data)
+      } catch (error) {
+        console.error('Erro ao buscar o produto:', error);
+      }
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+    }
+    findProduct(id)
+  }, [id])
 
   return (
     <div className="w-full">
@@ -14,17 +34,16 @@ function ProductViewPage() {
           <Gallery
             width={700}
             height={570}
-            images={[
-              {"src": "/produc-image-1.jpeg"},
-              {"src": "/produc-image-2.jpeg"},
-              {"src": "/produc-image-3.jpeg"},
-              {"src": "/produc-image-4.jpeg"},
-              {"src": "/produc-image-5.jpeg"},
-            ]}
+            images={product.images}
             showThumbs
             radius="4px"
           />
-          <BuyBox/>
+          <BuyBox product={product}>
+            <div className="flex flex-col gap-3 py-8">
+              <ProductsOptions title="Tamanho" options={product.sizes} radius="4px" />
+              <ProductsOptions title="Cor" options={product.colors} shape="circle" type="color" />
+            </div>
+          </BuyBox>
         </div>
         <Section 
           title="Produtos Relacionados" 
