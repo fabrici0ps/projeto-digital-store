@@ -10,13 +10,13 @@ function Footer() {
         <footer className="bg-darkgray-1 w-full">
             <div className="container-layout">
                 <div className="flex flex-col pt-16 items-center text-base text-white">
-                    <div className="flex w-full items-start justify-between pb-8">
+                    <div className="md:flex md:w-full items-start justify-between pb-8">
                         <div className="w-80">
                             <Logo location="footer" className="mb-9" />
                             <p className="mb-10">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                             </p>
-                            <div className="flex gap-7">
+                            <div className="flex mb-10 md:mb-0 gap-7">
                                 <Link to="https://www.facebook.com" target="_blank">
                                     <img src={FacebookIcon} alt="Facebook" />
                                 </Link>
@@ -28,7 +28,7 @@ function Footer() {
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex gap-28">
+                        <div className="grid grid-cols-2 md:flex gap-10 md:gap-28">
                             <CardFooter 
                                 title="Informação"
                                 informations={[

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 .swiper-pagination-bullet {
   background-color: #d1d5db !important;
   opacity: 1 !important;                    
@@ -11,8 +17,19 @@
   background-color: #C92071 !important;                
 }
 
+@media (max-width: 767.98px) {
+  .swiper-pagination {
+    position: static !important;
+    margin-top: 24px !important;
+  }
+}
+
 @layer components {
   .container-layout {
-    @apply mx-auto w-full max-w-[1440px] px-5 lg:px-28;
+    @apply mx-auto w-full max-w-[1440px] px-5 md:px-28;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

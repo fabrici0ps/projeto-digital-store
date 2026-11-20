@@ -1,11 +1,11 @@
-import logoHeader from "../assets/logo-header.svg"
-import logoFooter from "../assets/logo-footer.svg"
+import logoHeader from "../assets/logo-header.svg?react"
+import logoFooter from "../assets/logo-footer.svg?react"
 import {cn} from "../utils/tailwind"
 
 function Logo({location, className}) {
-    const logo = location === 'header' ? logoHeader : logoFooter;
+    const Logo = location === 'header' ? logoHeader : logoFooter;
     return (
-        <img src={logo} alt="Logo" className={cn(className, "w-[253px] h-11")} />
+        <Logo className={cn(className, "w-[253px] h-11")} />
     )
 }
 

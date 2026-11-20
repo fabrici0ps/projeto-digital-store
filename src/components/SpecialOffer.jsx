@@ -5,13 +5,13 @@ function SpecialOffer() {
     return (
         <div className="w-full bg-white">
             <div className="container-layout">
-                <div className="grid grid-cols-2 py-28 gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 py-28 gap-16">
                     <div className="flex justify-center items-center">
                         <img src="/air-jordan.png" alt="Air Jordan" />
                     </div>
                     <div className="flex flex-col justify-between">
                         <div className="flex flex-col gap-5">
-                            <span className="text-primary font-bold text-sm">Oferta especial</span>
+                            <span className="text-warning md:text-primary font-bold text-sm">Oferta especial</span>
                             <h2 className="text-darkgray-2 font-bold text-5xl">
                                 Air Jordan edição de colecionador
                             </h2>
@@ -22,7 +22,7 @@ function SpecialOffer() {
                         <Link to="/products">
                             <Button 
                                 title="Ver Oferta" 
-                                className="bg-primary w-52 mt-2"
+                                className="bg-primary w-52 mt-8 md:mt-2"
                             />
                         </Link>
                     </div>

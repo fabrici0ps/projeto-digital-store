@@ -40,31 +40,42 @@ function BannerHome() {
     ]
 
     return(
-        <div className="w-full bg-lightgray-3">
+        <div className="w-full bg-lightgray-3 py-8 md:py-12">
             <div className="container-layout">
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     spaceBetween={10}
                     slidesPerView={1}
+                    autoHeight={true}
                     pagination={{ clickable: true }}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    className="pb-4 md:pb-14"
                 >
                     {slidesBanner.map((slide) => (
                         <SwiperSlide key={slide.id}>
-                            <div className="flex flex-row items-center">
-                                <div className="flex flex-col items-start">
-                                    <span className="text-warning font-bold text-base">{slide.tag}</span>
-                                    <h1 className="text-6xl text-darkgray-1 font-extrabold leading-tight">{slide.title}</h1>
-                                    <p className="text-darkgray-2 text-lg">{slide.description}</p>
-                                    <Link to="/products">
-                                        <Button title="Ver Ofertas" className="bg-primary w-56 h-12 shadow-md mt-6" />
+                            <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-8">
+                                <div className="flex flex-col items-center text-center md:items-start md:text-left w-full md:w-1/2">
+                                    <span className="text-primary md:text-warning font-bold text-sm md:text-base">
+                                        {slide.tag}
+                                    </span>
+                                    <h1 
+                                        className="text-3xl md:text-6xl text-darkgray-1 font-extrabold leading-tight mt-2 md:mt-3"
+                                    >
+                                        {slide.title}
+                                    </h1>
+                                    <p className="text-darkgray-2 text-sm md:text-lg mt-3 md:mt-4 max-w-md md:max-w-none">
+                                        {slide.description}
+                                    </p>
+                                    <Link to="/products" className="w-full md:w-auto mt-6">
+                                        <Button title="Ver Ofertas" className="bg-primary w-full md:w-56 h-12 shadow-md" />
                                     </Link>
                                 </div>
-                                <div className="flex w-full justify-center items-center">
+                                <div className="flex w-full md:w-1/2 justify-center items-center">
                                     <img 
                                         src={slide.image} 
                                         alt={slide.title} 
-                                        className="w-full"/>
+                                        className="w-80 md:w-full max-w-lg object-contain"
+                                    />
                                 </div>
                             </div>
                         </SwiperSlide>

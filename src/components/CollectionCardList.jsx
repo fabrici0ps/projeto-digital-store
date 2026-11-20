@@ -1,8 +1,9 @@
+import { cn } from "../utils/tailwind"
 import CollectionCard from "./CollectionCard"
 
-function CollectionCardList({ collections }) {
+function CollectionCardList({ collections, className }) {
     return (
-        <div className="grid grid-cols-3 gap-3 w-full">
+        <div className={cn(className, "grid gap-3 w-full")}>
             {collections.map((collection, index) => (
                 <CollectionCard 
                     key={index}

@@ -20,7 +20,8 @@ function HomePage() {
           title="Coleções em destaque"
           className="pt-11 pb-28"
         >
-            <CollectionCardList 
+            <CollectionCardList
+              className="grid-cols-1 md:grid-cols-3 gap-3" 
               collections={
                 [
                   {
@@ -50,17 +51,20 @@ function HomePage() {
           textAlign="center"
           className="pb-32"
         >
+          <div className="flex justify-start md:justify-center overflow-x-auto overscroll-x-contain md:overflow-visible pb-2 md:pb-0 no-scrollbar">
             <CollectionItem
-                items={
-                  [
-                    { title: "Camisetas", image: Tshirt },
-                    { title: "Calças", image: Pants },
-                    { title: "Bonés", image: Pants },
-                    { title: "Headphones", image: Headphones },
-                    { title: "Tẽnis", image: Sneakers }
-                  ]
-                }            
+              className="gap-5"
+              items={
+                [
+                  { title: "Camisetas", image: Tshirt },
+                  { title: "Calças", image: Pants },
+                  { title: "Bonés", image: Pants },
+                  { title: "Headphones", image: Headphones },
+                  { title: "Tẽnis", image: Sneakers }
+                ]
+              }            
             />
+          </div>
         </Section>
       </div>
         

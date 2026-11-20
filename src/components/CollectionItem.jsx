@@ -1,6 +1,8 @@
-function CollectionItem({ items }) {
+import { cn } from "../utils/tailwind"
+
+function CollectionItem({ items, className }) {
     return (
-        <div className="flex gap-12 justify-center">
+        <div className={cn("flex gap-12 justify-center", className)}>
             {items.map((item, index) => (
                 <div key={index} className="flex flex-col items-center">
                     <div className="bg-white flex justify-center items-center rounded-full w-28 h-28">
